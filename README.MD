@@ -1,7 +1,9 @@
 # K8S Folding at home
 
 This is a kubernetes configuration to run folding@home.
-Based on [yurinnick/folding-at-home](yurinnick/folding-at-home) image.
+
+Based on [yurinnick/folding-at-home](https://hub.docker.com/r/yurinnick/folding-at-home) image.
+
 Related reddits [here](https://www.reddit.com/r/Folding/comments/fdtrxy/yet_another_docker_image/) and [here](https://www.reddit.com/r/homelab/comments/fdtwhv/foldinghome_with_docker/)
 
 ## Installation
