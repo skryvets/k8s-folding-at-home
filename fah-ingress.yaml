@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: folding-at-home-ingress
+  namespace: folding-at-home
+spec:
+  rules:
+  - host: your-ui-uri
+    http:
+      paths:
+        - backend:
+            serviceName: folding-at-home-ui-service
+            servicePort: 7396
+  - host: your-control-uri
+    http:
+      paths:
+        - backend:
+            serviceName: folding-at-home-control-service
+            servicePort: 36330

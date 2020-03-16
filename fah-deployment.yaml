@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: folding-at-home-deployment
+  namespace: folding-at-home
+  labels:
+    app: folding-at-home
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: folding-at-home
+  template:
+    metadata:
+      labels:
+        app: folding-at-home
+    spec:
+      containers:
+        - name: folding-at-home-container
+          image: yurinnick/folding-at-home:latest
+          ports:
+            - containerPort: 36330
+            - containerPort: 7396
+          resources:
+            limits:
+              cpu: "0.7"
+              memory: "10Gi"
